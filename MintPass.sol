@@ -7,9 +7,11 @@ pragma solidity >=0.4.22 <0.9.0;
 
 // Truffle imports
 import "../openzeppelin-contracts/contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol";
+import "../openzeppelin-contracts/contracts/utils/math/SafeMath.sol";
 
 // Remix imports
 //import "@openzeppelin/contracts/token/ERC1155/presets/ERC1155PresetMinterPauser.sol";
+//import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 // Audits
 // Last passed audits
@@ -18,6 +20,7 @@ import "../openzeppelin-contracts/contracts/token/ERC1155/presets/ERC1155PresetM
 // Optilistic :
 
 contract MintPass is ERC1155PresetMinterPauser {
+    using SafeMath for uint256;
 
     /***********************************|
     |        Structs                    |
